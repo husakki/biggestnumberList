@@ -1,12 +1,13 @@
--module(bnl)
+-module(bnl).
 
--export([bnl/1]).
+-export([maxList/1]).
 
-% bnl(List) when List == [] ->
-%    io:format("List is empty").
+maxList(List) when List == [] ->
+   io:format("List is empty\n");
 
-bnl(List) ->
+maxList(List) ->
     [Head | Tail] = List,
-    bnl(Tail,Head).
+    maxList(Tail,Head).
 
-% bnl(List,Biggest) ->
+maxList(List, Biggest) ->
+    ok.
